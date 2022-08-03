@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- edited with XMLSPY v5 rel. 3 U (http://www.xmlspy.com) by Staff (PNNL) -->
+
+<queries>
+	<aQuery>
+       <region name="USA" />
+       <region name="Canada" />
+       <region name="Japan" />
+       <region name="Australia_NZ" />
+       <region name="China" />
+       <region name="Middle East" />
+       <region name="Southeast Asia" />
+       <region name="India" />
+       <region name="Africa_Eastern" />
+       <region name="Africa_Northern" />
+       <region name="Africa_Southern" />
+       <region name="Africa_Western" />
+       <region name="Brazil" />
+       <region name="Central America and Caribbean" />
+       <region name="Central Asia" />
+       <region name="EU-12" />
+       <region name="EU-15" />
+       <region name="Europe_Eastern" />
+       <region name="Europe_Non_EU" />
+       <region name="European Free Trade Association" />
+       <region name="Indonesia" />
+       <region name="Mexico" />
+       <region name="Pakistan" />
+       <region name="Russia" />
+       <region name="South Africa" />
+       <region name="South America_Northern" />
+       <region name="South America_Southern" />
+       <region name="Argentina" />
+       <region name="Colombia" />
+       <region name="South Asia" />
+       <region name="South Korea" />
+       <region name="Taiwan" />
+            <supplyDemandQuery title="elec gen by gen tech and vint">
+               <axis1 name="technology">technology</axis1>
+               <axis2 name="Year">physical-output[@vintage]</axis2>
+               <xPath buildList="true" dataName="output" group="false" sumAll="false">*[@type='sector' (:collapse:) and
+               (@name='electricity' or @name='elect_td_bld' or @name='industrial energy use')]/
+               *[@type='subsector']/*[@type='technology' and not (@name='electricity' or @name='elect_td_bld')]/
+               *[@type='output' and (@name='electricity' or @name='elect_td_bld')]/
+               physical-output/node()</xPath>
+               <comments/>
+               <showAttribute attribute-name="year" level="technology"/>
+            </supplyDemandQuery>
+      </aQuery>
+
+	<aQuery>
+       <region name="USA" />
+       <region name="Canada" />
+       <region name="Japan" />
+       <region name="Australia_NZ" />
+       <region name="China" />
+       <region name="Middle East" />
+       <region name="Southeast Asia" />
+       <region name="India" />
+       <region name="Africa_Eastern" />
+       <region name="Africa_Northern" />
+       <region name="Africa_Southern" />
+       <region name="Africa_Western" />
+       <region name="Brazil" />
+       <region name="Central America and Caribbean" />
+       <region name="Central Asia" />
+       <region name="EU-12" />
+       <region name="EU-15" />
+       <region name="Europe_Eastern" />
+       <region name="Europe_Non_EU" />
+       <region name="European Free Trade Association" />
+       <region name="Indonesia" />
+       <region name="Mexico" />
+       <region name="Pakistan" />
+       <region name="Russia" />
+       <region name="South Africa" />
+       <region name="South America_Northern" />
+       <region name="South America_Southern" />
+       <region name="Argentina" />
+       <region name="Colombia" />
+       <region name="South Asia" />
+       <region name="South Korea" />
+       <region name="Taiwan" />
+            <supplyDemandQuery title="elec gen by gen tech">
+               <axis1 name="technology">technology</axis1>
+               <axis2 name="Year">physical-output[@vintage]</axis2>
+               <xPath buildList="true" dataName="output" group="false" sumAll="false">*[@type='sector' (:collapse:) and
+               (@name='electricity' or @name='elect_td_bld' or @name='industrial energy use')]/
+               *[@type='subsector']/*[@type='technology' and not (@name='electricity' or @name='elect_td_bld')]/
+               *[@type='output' and (@name='electricity' or @name='elect_td_bld')]/
+               physical-output/node()</xPath>
+               <comments/>
+            </supplyDemandQuery>
+   </aQuery>
+
+	<aQuery>
+       <region name="USA" />
+       <region name="Canada" />
+       <region name="Japan" />
+       <region name="Australia_NZ" />
+       <region name="China" />
+       <region name="Middle East" />
+       <region name="Southeast Asia" />
+       <region name="India" />
+       <region name="Africa_Eastern" />
+       <region name="Africa_Northern" />
+       <region name="Africa_Southern" />
+       <region name="Africa_Western" />
+       <region name="Brazil" />
+       <region name="Central America and Caribbean" />
+       <region name="Central Asia" />
+       <region name="EU-12" />
+       <region name="EU-15" />
+       <region name="Europe_Eastern" />
+       <region name="Europe_Non_EU" />
+       <region name="European Free Trade Association" />
+       <region name="Indonesia" />
+       <region name="Mexico" />
+       <region name="Pakistan" />
+       <region name="Russia" />
+       <region name="South Africa" />
+       <region name="South America_Northern" />
+       <region name="South America_Southern" />
+       <region name="Argentina" />
+       <region name="Colombia" />
+       <region name="South Asia" />
+       <region name="South Korea" />
+       <region name="Taiwan" />
+       <supplyDemandQuery title="ghg_tech_vint">
+         <axis1 name="technology">technology</axis1>
+         <axis2 name="Year">emissions</axis2>
+         <xPath buildList="true" dataName="emissions" group="false" sumAll="false">*[@type = 'sector' (:collapse:) and @name='electricity']/*[@type = 'subsector']/*[@type = 'technology']/*[@type = 'GHG']/emissions/node()</xPath>
+         <comments/>
+         <showAttribute attribute-name="year" level="technology"/>
+       </supplyDemandQuery>
+   </aQuery>
+
+    <aQuery>
+      <region name="USA"/>
+      <region name="Canada"/>   
+      <region name="Africa_Eastern"/>   
+      <region name="Africa_Northern"/>    
+      <region name="Africa_Southern"/>
+      <region name="Africa_Western"/>
+      <region name="Japan"/>
+      <region name="South Korea"/>
+      <region name="China"/>
+      <region name="India"/>
+      <region name="Brazil"/>
+      <region name="Central America and Caribbean"/>
+      <region name="Central Asia"/>
+      <region name="EU-12"/>  
+      <region name="EU-15"/>
+      <region name="Europe_Eastern"/>
+      <region name="Europe_Non_EU"/>
+      <region name="European Free Trade Association"/>
+      <region name="Indonesia"/>
+      <region name="Mexico"/>
+      <region name="Middle East"/>
+      <region name="Pakistan"/>
+      <region name="Russia"/>
+      <region name="South Africa"/>
+      <region name="South America_Northern"/>
+      <region name="South America_Southern"/>
+      <region name="South Asia"/>
+      <region name="Southeast Asia"/>
+      <region name="Taiwan"/>
+      <region name="Argentina"/>
+      <region name="Colombia"/>
+      <region name="Australia_NZ"/>
+     <emissionsQueryBuilder title="ghg_sct">
+         <axis1 name="sector">sector</axis1>
+         <axis2 name="Year">emissions</axis2>
+         <xPath buildList="true" dataName="emissions" group="false" sumAll="false">
+          <![CDATA[ 
+           declare function local:deep-copy($nodes as node()*) as node()* {
+                         for $node in $nodes
+                         return typeswitch($node)
+                         case $e as element()
+                             return element { local-name($e) } {
+                                 $e/@*,
+                                 for $c in $e/(* | text())
+                                 return local:deep-copy($c)
+                             }
+                         default return $node
+                     };
+           declare function local:rename-resource-emiss($resources as node()*) as node()* {
+                   for $resource in $resources
+             let $scn := $resource/ancestor::scenario,
+                 $rgn := $resource/ancestor::region,
+                 $retDoc := document { element scenario {
+                  $scn/@*,
+                  element region {
+                    $rgn/@*,
+                    element sector {
+                            attribute type { 'sector' },
+                      $resource/@name,
+                      element subsector {
+                        attribute type { 'subsector' },
+                        $resource/@name,
+                        element technology {
+                          attribute type { 'technology' },
+                          $resource/@name,
+                          local:deep-copy($resource/*[@type='GHG'])
+                        }
+                        }
+                    }
+                  }
+                }
+              }
+             return
+                 $retDoc//text()
+           };  
+           declare function local:run-combine-sector-resource-emiss($scenarios as xs:string*, $regions as xs:string*, $collection as xs:string) as node()* {  
+           let $regionsG := if(not($regions[1] = 'Global'))
+                then $regions
+                else distinct-values(collection($collection)/scenario/world/*[@type='region']/@name)
+           return
+           for $scenario in $scenarios,       
+           $region in $regionsG   
+           let $scenario_split := tokenize($scenario, ' '),       
+                     $scenario_name := string-join($scenario_split[position() < last()], ' '),
+           $scenario_date := $scenario_split[last()],
+           $currTree := collection($collection)/scenario[@name = $scenario_name and @date = $scenario_date]/world/*[@type = 'region' and @name=$region]
+           return (: rename resources as a sector/subsector/tech :)
+            local:rename-resource-emiss($currTree/*[@type='resource' and exists(child::*[@type='GHG'])])
+            | (: get the sector emissions :)
+            $currTree/*[@type = 'sector']//*[@type = 'GHG']/emissions/node()
+     }; 
+               local:run-combine-sector-resource-emiss((:scenarios:), (:regions:), (:collection:))
+               ]]>
+   </xPath>
+         <comments/>
+      </emissionsQueryBuilder>
+   </aQuery>
+
+<aQuery>
+       <region name="USA" />
+       <region name="Canada" />
+       <region name="Japan" />
+       <region name="Australia_NZ" />
+       <region name="China" />
+       <region name="Middle East" />
+       <region name="Southeast Asia" />
+       <region name="India" />
+       <region name="Africa_Eastern" />
+       <region name="Africa_Northern" />
+       <region name="Africa_Southern" />
+       <region name="Africa_Western" />
+       <region name="Brazil" />
+       <region name="Central America and Caribbean" />
+       <region name="Central Asia" />
+       <region name="EU-12" />
+       <region name="EU-15" />
+       <region name="Europe_Eastern" />
+       <region name="Europe_Non_EU" />
+       <region name="European Free Trade Association" />
+       <region name="Indonesia" />
+       <region name="Mexico" />
+       <region name="Pakistan" />
+       <region name="Russia" />
+       <region name="South Africa" />
+       <region name="South America_Northern" />
+       <region name="South America_Southern" />
+       <region name="Argentina" />
+       <region name="Colombia" />
+       <region name="South Asia" />
+       <region name="South Korea" />
+       <region name="Taiwan" />
+     <query title="Land Use Change Emission (future)">
+         <axis1 name="land-use-change-emission">LandLeaf</axis1>
+         <axis2 name="Year">land-use-change-emission[@year]</axis2>
+         <xPath buildList="true" dataName="land-use-change-emission" group="false" sumAll="true">/LandNode[@name='root' or @type='LandNode' (: collapse :)]//land-use-change-emission[@year&gt;1975]/text()</xPath>
+         <comments/>
+      </query>
+   </aQuery>
+
+    <aQuery>
+       <region name="USA" />
+       <region name="Canada" />
+       <region name="Japan" />
+       <region name="Australia_NZ" />
+       <region name="China" />
+       <region name="Middle East" />
+       <region name="Southeast Asia" />
+       <region name="India" />
+       <region name="Africa_Eastern" />
+       <region name="Africa_Northern" />
+       <region name="Africa_Southern" />
+       <region name="Africa_Western" />
+       <region name="Brazil" />
+       <region name="Central America and Caribbean" />
+       <region name="Central Asia" />
+       <region name="EU-12" />
+       <region name="EU-15" />
+       <region name="Europe_Eastern" />
+       <region name="Europe_Non_EU" />
+       <region name="European Free Trade Association" />
+       <region name="Indonesia" />
+       <region name="Mexico" />
+       <region name="Pakistan" />
+       <region name="Russia" />
+       <region name="South Africa" />
+       <region name="South America_Northern" />
+       <region name="South America_Southern" />
+       <region name="Argentina" />
+       <region name="Colombia" />
+       <region name="South Asia" />
+       <region name="South Korea" />
+       <region name="Taiwan" />
+      <supplyDemandQuery title="FE_sct_fuel">
+         <axis1 name="sector">sector</axis1>
+         <axis2 name="Year">demand-physical[@vintage]</axis2>
+         <xPath buildList="true" dataName="input" group="false" sumAll="false">*[@type='sector' and ((@name='building' or @name='industry' or @name='transportation') or (exists(child::keyword/@final-energy)))]//*[@type='input' and not(@name='trn_pass_road' or @name='limestone' or @name='process heat cement' or @name='industrial energy use' or @name='industrial feedstocks' or @name='renewable')]/demand-physical[@unit='EJ']/node()</xPath>
+         <comments/>
+      </supplyDemandQuery>
+   </aQuery>
+
+<aQuery>
+       <region name="USA" />
+       <region name="Canada" />
+       <region name="Japan" />
+       <region name="Australia_NZ" />
+       <region name="China" />
+       <region name="Middle East" />
+       <region name="Southeast Asia" />
+       <region name="India" />
+       <region name="Africa_Eastern" />
+       <region name="Africa_Northern" />
+       <region name="Africa_Southern" />
+       <region name="Africa_Western" />
+       <region name="Brazil" />
+       <region name="Central America and Caribbean" />
+       <region name="Central Asia" />
+       <region name="EU-12" />
+       <region name="EU-15" />
+       <region name="Europe_Eastern" />
+       <region name="Europe_Non_EU" />
+       <region name="European Free Trade Association" />
+       <region name="Indonesia" />
+       <region name="Mexico" />
+       <region name="Pakistan" />
+       <region name="Russia" />
+       <region name="South Africa" />
+       <region name="South America_Northern" />
+       <region name="South America_Southern" />
+       <region name="Argentina" />
+       <region name="Colombia" />
+       <region name="South Asia" />
+       <region name="South Korea" />
+       <region name="Taiwan" />
+         <supplyDemandQuery title="primary energy consumption by region (direct equivalent)">
+            <axis1 name="fuel">input[@name]</axis1>
+            <axis2 name="Year">demand-physical[@vintage]</axis2>
+            <xPath buildList="true" dataName="input" group="false" sumAll="false"><![CDATA[ 
+			 	 	 declare function local:append-heirarchy($parent as node(), $append as node()) as node() {
+			 	 		 let $scn := $parent/ancestor::scenario,
+			 			   	  $rgn := $parent/ancestor::region
+			 			   return
+			 			   	  document { element scenario {
+			 			 	  					$scn/@*,
+			 			 						element region {
+			 			 							$rgn/@*,
+			 			 							$append
+			 			 						}
+			 			 	  				}
+			 				}
+			 	 	 };  
+			 	 	 declare function local:get-primary-renewable($outputs as node()*) as node()* {
+			 	 	 unordered { 	
+			 	 	 for $output in $outputs 
+			 	 	 let $new_output :=  
+			 	 	 element input {
+			 	 		 attribute type {'input'},
+			 	 		 attribute name {$output/parent::*/following-sibling::keyword/@primary-renewable},
+			 	 		 element demand-physical {
+			 	 			 attribute vintage {$output/@vintage},
+			 	 			 attribute unit {$output/@unit},
+			 	 			 text { $output }
+			 	 		 }
+			 	 	 },
+			 	 	 $new_root := local:append-heirarchy($output/parent::*/parent::*, $new_output)
+			 	 	 return $new_root//text()
+			 	 	 } 
+			 	 	 };
+			 	 	 declare function local:run-primary-energy($scenarios as xs:string*, $regions as xs:string*, $collection as xs:string) as node()* { 	
+			 	 	 let $regionsG := if(not($regions[1] = 'Global'))
+			 	 	 		  then $regions
+			 	 	 		  else distinct-values(collection($collection)/scenario/world/*[@type='region']/@name)
+			 	 	 return
+			 	 	 for $scenario in $scenarios, 	    
+			 	 	 $region in $regionsG 	
+			 	 	 let $scenario_split := tokenize($scenario, ' '), 	    
+                     $scenario_name := string-join($scenario_split[position() < last()], ' '),
+			 	 	 $scenario_date := $scenario_split[last()],
+			 	 	 $currTree := collection($collection)/scenario[@name = $scenario_name and @date = $scenario_date]/world/*[@type = 'region' and @name=$region]
+			 	 	 return (: get renewables from electricity :)
+					 	 	 	local:get-primary-renewable($currTree/supplysector[@name='electricity' or @name='elect_td_bld']//keyword[fn:exists(@primary-renewable)]/preceding-sibling::output-primary/physical-output)
+					 		 	| (: get renewables from H2ProdCS :)
+					 	 	 	local:get-primary-renewable($currTree/supplysector[@name='H2 central production'](: /*[@type='subsector' (: collapse :) and fn:not(@name='electrolysis')] :)//keyword[fn:exists(@primary-renewable)]/preceding-sibling::output-primary/physical-output)
+					 	 	 	| (: get renewables from H2ProdDist :)
+					 	 	 	local:get-primary-renewable($currTree/supplysector[@name='H2 forecourt production'](: /*[@type='subsector' (: collapse :) and fn:not(@name='electrolysis')] :)//keyword[fn:exists(@primary-renewable)]/preceding-sibling::output-primary/physical-output)
+					 	 	 	| (: get the primaries :)
+	 	 						$currTree//keyword[fn:exists(@primary-consumption)]/preceding-sibling::input-energy/demand-physical/text()
+                                | (: get traditional biomass :)
+							    $currTree//*[@type='input' and @name='traditional biomass']/demand-physical/node()
+                                | (: get biodiesel feedstocks :)
+							    $currTree//*[@type='input' and @name='regional biomassOil']/demand-physical/node()
+                                | (: get corn ethanol feedstocks :)
+							    $currTree//*[@type='input' and @name='regional corn for ethanol']/demand-physical/node()
+                                | (: get sugar cane ethanol :)
+							    $currTree//*[@type='input' and @name='regional sugar for ethanol']/demand-physical/node()
+			 	 	 	
+	 	 }; 
+            	 local:run-primary-energy((:scenarios:), (:regions:), (:collection:))
+            ]]></xPath>
+            <comments/>
+            <labelRewriteList append-values="false">
+               <level name="input">
+                  <rewrite from="exotic-elect" to="j breakthrough"/>
+                  <rewrite from="wind-H2" to="g wind"/>
+                  <rewrite from="biomass" to="d biomass"/>
+                  <rewrite from="traditional biomass" to="j traditional biomass"/>
+                  <rewrite from="crude oil" to="a oil"/>
+                  <rewrite from="regional corn for ethanol" to="d biomass"/>
+                  <rewrite from="nuclear-elect" to="e nuclear"/>
+                  <rewrite from="solar-H2" to="h solar"/>
+                  <rewrite from="regional natural gas" to=""/>
+                  <rewrite from="regional biomassOil" to="d biomass"/>
+                  <rewrite from="traded unconventional oil" to="a oil"/>
+                  <rewrite from="geothermal-elect" to="i geothermal"/>
+                  <rewrite from="regional sugar for ethanol" to="d biomass"/>
+                  <rewrite from="natural gas" to="b natural gas"/>
+                  <rewrite from="hydro-elect" to="f hydro"/>
+                  <rewrite from="solar-elect" to="h solar"/>
+                  <rewrite from="coal" to="c coal"/>
+                  <rewrite from="elect_td_ind" to=""/>
+                  <rewrite from="wind-elect" to="g wind"/>
+                  <rewrite from="nuclear-H2" to="e nuclear"/>
+               </level>
+            </labelRewriteList>
+         </supplyDemandQuery>
+   </aQuery>
+
+<aQuery>
+       <region name="Global" />
+         <ClimateQuery title="total climate forcing">
+            <axis1 name="forcing-total">none</axis1>
+            <axis2 name="Year">forcing-total[@year]</axis2>
+            <xPath buildList="true" dataName="forcing-total" group="false" sumAll="false">climate-model/forcing-total/text()</xPath>
+            <comments/>
+         </ClimateQuery>
+  </aQuery>
+
+<aQuery>
+       <region name="Global" />
+         <ClimateQuery title="global mean temperature">
+            <axis1 name="temperature">none</axis1>
+            <axis2 name="Year">global-mean-temperature[@year]</axis2>
+            <xPath buildList="true" dataName="global-mean-temperature" group="false" sumAll="false">climate-model/global-mean-temperature/text()</xPath>
+            <comments/>
+       </ClimateQuery>
+   </aQuery>
+
+<aQuery>
+       <region name="Global" />
+      <marketQuery title="CO2 prices">
+         <axis1 name="market">market</axis1>
+         <axis2 name="Year">market</axis2>
+         <xPath buildList="true" dataName="price" group="false" sumAll="false">Marketplace/market[true() and contains(@name,'CO2')]/price/node()</xPath>
+         <comments/>
+      </marketQuery>
+   </aQuery>
+
+</queries>
