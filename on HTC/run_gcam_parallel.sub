@@ -1,0 +1,14 @@
+# Run GCAM from docker
+
+universe = docker
+docker_image = mengluo/gcam:v6-0
+log = interactive.log
+output = chtc_$(Cluster)_$(Process).out
+error = chtc_$(Cluster)_$(Process).err
+transfer_input_files = configuration_parallel.tar.gz
+executable = run_gcam_$(scenario).sh
+request_cpus = 1
+request_memory = 10GB
+request_disk = 10GB
+
+queue scenario from scenario_list.txt
