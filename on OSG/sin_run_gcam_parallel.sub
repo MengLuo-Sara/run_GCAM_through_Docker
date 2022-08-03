@@ -1,0 +1,12 @@
++SingularityImage = "stash:///osgconnect/public/mluo_0801/gcam_v6-0.sif"
+log = interactive_$(Cluster)_$(scenario).log
+output = chtc_$(Cluster)_$(scenario).out
+error = chtc_$(Cluster)_$(scenario).err
+transfer_input_files = configuration_parallel.tar.gz
+transfer_output_files = policy_output.tar.gz
+executable = run_gcam_$(scenario).sh
+request_cpus = 1
+request_memory = 15GB
+request_disk = 20GB
+
+queue scenario from scenario_list.txt
